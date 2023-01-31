@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseSwap| Buy &amp; Sell crypto assets with our advanced escrow tools. New to crypto exchange? Learn more here</title>
+
+    <!-- imports -->
+    <link rel="stylesheet" href="assets/bstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- font awesome links -->
+    <link rel="stylesheet" href="assets/fa/css/fontawesome.min.css">
+    <link rel="stylesheet" href="%20assets/fa/css/brands.min.html">
+    <link rel="stylesheet" href="assets/fa/css/solid.min.css">
+    <link rel="stylesheet" href="assets/fa/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="assets/flaticon/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/plugin/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Abel|Lobster|Heebo|ABeeZee|Roboto%20Condensed|Roboto">
+    <!-- End ==========================================================================
+
+    main css -->
+    <link id="themePack" rel="stylesheet" href="qikcss/style.css">
+    <link rel="stylesheet" href="qikcss/main.css">
+    <link href="../unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- End Messages ======================================================= -->
+
+
+    <div style="height: 100%;">
+        <!-- navbar -->
+        <div class="d-none d-sm-block">
+            <nav class="py-4 navbar navbar-expand-lg navbar-light bg-light fixed-top authenticate-container-bg-2" style="box-shadow: none; font-family: 'abel';">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/bipswap_logo_main.png" alt="" srcset="" class="logo-lg" style="height:33px; width: 150px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ml-4">
+                            <a class="nav-link moreWhite" href="account/index13ff.html" style="font-size: 18px;">
+                                Trade Now</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link moreWhite" href="learn.html" id="navbarDropdown" style="font-size: 18px !important;">
+                                Learn
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link moreWhite" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 18px !important;">
+                                Company <i class=" fi fi-rr-angle-small-down fixIcon3 moreWhite2"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #20242a;">
+                                <p>
+                                    <a class="dropdown-item moreWhite" href="aboutUs.html" style="font-size: 18px;">About Us</a>
+                                </p>
+                                <p>
+                                    <a class="dropdown-item moreWhite" href="learn.html" style="font-size: 18px;">Escrow Methods</a>
+                                </p>
+                                <!-- <p>
+                                    <a class="dropdown-item moreWhite2" href="#" style="font-size: 18px;"> Security</a>
+                                </p> -->
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item active">
+                            <a class="nav-link moreWhite" href="mailto:baseswap.team@gmail.com" style="font-size: 18px !important;"> 
+                                Support
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item active mr-2">
+                            <a class="nav-link moreWhite" href="account/index.html" style="font-size: 18px !important;"> 
+                                    Log in
+                                </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="account/register-view.html" style="font-size: 18px !important;">
+                                <button class="Btn">Register</button>
+                            </a>
+                        </li>
+
+                    </ul>
+            </nav>
+            </div>
+
+            <!-- for mobile -->
+            <div class="d-block d-sm-none">
+                <div class="toggleOverlay" onclick="removeToggleOverlay()"></div>
+                <div class="container-fluid">
+                    <div class="row fixed-top">
+                        <div class="col-12 px-4 py-2" id="navSmallDb">
+                            <nav>
+                                <div class="row">
+                                    <div class="col-8" id="logoDark">
+                                        <a class="navbar-brand" href="index.html"><img src="assets/images/bipswap_logo_main.png" alt="" srcset="" class="logo-lg" style="height:27px; width: 130px;"></a>
+                                    </div>
+                                    <div class="col-8" id="logoLight" style="display: none;">
+                                        <a class="navbar-brand" href="index.html"><img src="assets/images/bipswap_logo_main2.png" alt="" srcset="" class="logo-lg" style="height:27px; width: 130px;"></a>
+                                    </div>
+
+                                    <div class="col-4" style="text-align: right; padding-right: 15px;">
+                                        <div style="padding-top: 10px; font-size: 20px;">
+                                            <i class="fi fi-rr-menu-burger f-icon" id="toggleDropdownNavSmall" onclick="toggleNavSmall()"></i>
+                                        </div>
+
+                                        <div class="sm-nav-drop-down" style="height: 100% !important; width: 70%;">
+                                            <div class="sm-nav-content m-4" style="text-align: left;">
+                                                <small>Learn</small>
+                                                <a href="account/index13ff.html">
+                                                    <div class="row mt-2">
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Exchange
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5 align-right">
+                                                            <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="learn.html">
+                                                    <div class="row mt-2">
+                                                        <div class="col-7">
+                                                            <p>
+                                                                New to Crypto
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5 align-right">
+                                                            <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="learn.html">
+                                                    <div class="row mt-2">
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Wallet Linking
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5 align-right">
+                                                            <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                        </div>
+                                                    </div>
+                                                </a> <br>
+
+                                                <div class="row mt-2" style="border-top: 1px solid #69737E;" class="pt-4">
+                                                    <div class="col-12 mt-2">
+                                                        <small>Company</small>
+                                                    </div>
+                                                    <div class="col-7 mt-2">
+                                                        <p>
+                                                            <a href="aboutUs.html" style="font-size: 14px;"></i> Who we are</a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-5 mt-2 align-right">
+                                                        <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                    </div>
+                                                </div>
+
+                                                <a href="mailto:baseswap.team@gmail.com">
+                                                    <div class="row mt-2">
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Support
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5 align-right">
+                                                            <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <div class="mt-4" style="border-top: 1px solid #69737E;" class="pt-2">
+
+                                                    <p class="mt-4">
+                                                        <a href="account/index.html" style="font-size: 14px;">
+                                                            <button class="Btn py-2" style="background: #0C121F; color: #fff; width: 100%;">Sign in</button>
+                                                        </a>
+                                                    </p>
+                                                    <a href="account/register-view.html">
+                                                        <button type="button" class="Btn px-4 py-2" style="background: #333fff; color: #fff; width: 100%;">
+                                                        Register
+                                                    </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END -->
+
+
+            <!-- desktop Body -->
+
+            <div class="authenticate-container authenticate-container-bg-2" style="padding: 0px;">
+                <div class="container-fluid d-none d-sm-block">
+                    <div class="row">
+
+
+
+                    </div>
+                </div>
+                <div class="" style="margin-top: 80px;">
+
+                    <div class="container-fluid mt-100 dark_bg2">
+                        <div class="row">
+                            <div class="col-md-4 col-12 my-4">
+                                <div class="align-center">
+                                    <img src="assets/images/escrow.png" alt=""><br>
+                                    <div class="my-4">
+                                        <h2>Trade with one of the world leading crypto exchange platforms</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-12 mb-4 mt-100 align-center">
+                                <div class="px-4">
+                                    <h1>Why crypto escrow exchange?</h1>
+                                    <h4 class="mt-4" style="font-family:'heebo'; font-weight: normal">
+                                        Escrow services are the key to more secure payments. This financial arrangement allows a representative third party to bring neutrality to transactions by holding payment of the cryptocurrency required for two parties involved in a given transaction.
+                                        The escrow service provider manages the cryptocurrency in question and keeps them secure throughout the duration of the transaction.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="container-fluid" style="background:white">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 mt-100">
+                                    <h2 style="color:#000">How Crypto Escrow Exchange Works</h2>
+                                    <p style="font-family:'heebo'; color:#000">
+                                        <h4 style="font-family:'heebo'; font-weight: normal">
+                                            BaseSwap ships with most advanced technologies and easy to use tools for secure crypto exchange processes. We have highly experienced team of cryptocurrency officers. Our services ensure that the terms of the transaction agreed upon by both the Buyer
+                                            and Seller are satisfied.
+
+                                        </h4>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-12">
+                                    <div class="my-4">
+                                        <img src="assets/images/bi_exn.png" alt="" style="width:100px; height:100px">
+                                    </div>
+                                </div>
+                                <div class="col-md-9 mt-4 col-12">
+                                    <h3 style="color:#000">Create an escrow account to Start or join a Trade</h3>
+                                    <h5 style="color:#000">
+                                        One of the two parties, either the Buyer or Seller, will initiate the transaction. This process begins when the user inquires about the offering and creates an account on BaseSwap. With an account set up, the two parties can solidify the terms of their
+                                        agreement.
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-12">
+                                    <div class="my-4">
+                                        <img src="assets/images/bi_fee.png" alt="" style="width:100px; height:100px">
+                                    </div>
+                                </div>
+                                <div class="col-md-9 mt-4 col-12">
+                                    <h3 style="color:#000">Buyer and Seller pays on Baseswap</h3>
+                                    <h5 style="color:#000">
+                                        The Buyer or Seller can initiate the trade. The Buyer and Seller sends the cryptocurrency from their account to the baseswap.io escrow service, where it is immediately transferred to a USD stablecoin and stored in a no-interest escrow account. The value
+                                        of the cryptocurrency is protected from volatility until both parties agree the transaction is complete.
+                                    </h5>
+                                    <h5 style="color:#000">
+                                        We have provided multiple payment options to complete exchange payments, this includes connecting digital wallets like MetaMask and walletConnect supported wallets (like Trust Wallet) to Baseswap in other to securely complete and sign payments all at
+                                        once.
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-12">
+                                    <div class="my-4">
+                                        <img src="assets/images/bi_stat.png" alt="" style="width:100px; height:100px">
+                                    </div>
+                                </div>
+                                <div class="col-md-9 mt-4 col-12">
+                                    <h3 style="color:#000">Trade terms are reviewed and approved</h3>
+                                    <h5 style="color:#000">
+                                        Our systems review all trade terms to ensure both buyer and seller have satisfied all transaction terms for the crypto exchange. In case of any despute, our team have been highly trained to settle any despute that might arise during exchange. However
+                                        this is unlikely to happen as our highly advanced systems ensure both parties automatically fulfills the exchange terms.
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 col-12">
+                                    <div class="my-4">
+                                        <img src="assets/images/bi_stat.png" alt="" style="width:100px; height:100px">
+                                    </div>
+                                </div>
+                                <div class="col-md-9 mt-4 col-12">
+                                    <h3 style="color:#000">BaseSwap releases Crypto Funds</h3>
+                                    <h5 style="color:#000">
+                                        Once all trade terms are approved, the funds are immediately released to both seller's and buyer's specified wallet addresses. All you need do is click on withdraw, verify your account and you receive the funds in your wallet As soon as possible depending
+                                        on the network at the given time.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mt-100">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>BaseSwap Virtual Wallet</h1>
+                                <h5 class="mt-4 moreWhite">
+                                    Create a wallet on baseswap.io, to hold cryptocurrencies as stable coins. You can transfer, withdraw, and Trade with wallet funds.
+                                </h5>
+                                <h5 class="moreWhite">
+                                    To use wallet funds for escrow exchange or to Buy and sell crypto, you must fund your wallet with the desired cryptocurrency. Wallet funds are not affected by market liquidity, so you can hold you crypto tokens on BaseSwap for as long as you want before
+                                    joining or creating trades with them.
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <h1>Extra Escrow Features</h1>
+                                <h4 class="mt-4 moreWhite"><i class="fi fi-rr-circle-small dColourGreen fixIcon3"></i> Connecting wallets</h4>
+                                <h5 class="mt-4 moreWhite">
+                                    One of the payment options for crypto exchange on baseswap.io is connecting your wallets. We support various wallet integrations like MetaMask, WalletConnect, Binance smartchain, Trezor, Blockchain and other digital wallet providers.
+                                </h5>
+                                <h5 class="moreWhite">
+                                    We support Keyless wallet connections were you get prompted to sign all trasactions yourself. You can also securely import your wallets by providing wallet sensitive keys.
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="row border-t pt-4" style="margin-top: 50px;">
+                            <div class="col-md-12 align-center">
+                                <h5 style="color: #fff; font-size: 28px;">BaseSwap</h5>
+                            </div>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 col-6" style="font-size: 14px;">
+                                        <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">COMPANY</h5>
+                                        <p style="font-size: 14px;"><span class="fa fa-map-marker"></span> Registered office address: CHADWORD HOUSE, WILMSLOW ROAD, HANDFORTH, CHESHIRE, SK9 3HP</p>
+
+                                        <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">SUPPORT</h5>
+                                        <a href="mailto:baseswap.team@gmail.com" target="_blank" style="text-decoration: none; color: rgb(226, 219, 219);;">
+                                            <p> baseswap.team@gmail.com</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-6" style="color:white; font-size: 14px;">
+                                        <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">LEGAL</h5>
+                                        <a href="terms-and-conditions.html" style="color: rgb(196, 186, 186); font-size: 16px">Terms and
+                        Conditions</a><br>
+                                        <a href="privacy-policy.html" style="color: rgb(196, 186, 186); font-size: 16px">Policy</a><br>
+                                        <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">DISCLAIMER</h5>
+                                        <p style="font-size: 14px;">
+                                            You agree to be of legal age in your country to partake in this program, and in all the cases your minimal age must be 18 years.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-6" style="font-size: 14px;">
+                                        <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">QUICK LINKS</h5>
+                                        <a href="aboutUs.html" style="color: rgb(196, 186, 186);">About Us</a><br>
+                                        <a href="#" style="color: rgb(196, 186, 186);">Learn About Ethereum Tokens</a><br>
+                                        <a href="#" style="color: rgb(196, 186, 186);">Why Crypto Escrow service</a><br>
+                                        <p></p>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <div style="text-align: center; background: none; padding:12px">
+                                            <p>Copyright &copy; BaseSwap 2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- END -->
+        </div>
+
+
+
+
+
+
+        <!-- Js Imports -->
+        <script src="assets/jquery.js"></script>
+        <script src="assets/bstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/plugin/lc_switch.min.js"></script>
+        <script src="qikjs/main.js"></script>
+        <script src="qikjs/mainsm.js"></script>
+        <script src="qikjs/utils.js"></script>
+        <script src="assets/plugin/jquery/jquery-ui.min.js"></script>
+        <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
+
+        <script>
+            lc_switch('input[type=checkbox], input[type=radio]', {
+
+                // (string) "checked" status label text
+                on_txt: '<i class="fa fa-moon"></i>',
+
+                // (string) "not checked" status label text
+                off_txt: '<i class="fa fa-sun"></i>',
+
+                // (string) custom "on" color. Supports also gradients
+                on_color: '#AC9021',
+
+                // (bool) whether to enable compact mode
+                compact_mode: true
+            });
+        </script>
+
+
+        <script>
+            $("Input").on("focus", function() {
+                $("#mobile-bottom-nav").hide();
+            });
+
+            $("Input").on("blur", function() {
+                $("#mobile-bottom-nav").show();
+            });
+        </script>
+
+        <!-- data aos -->
+        <script>
+            AOS.init();
+        </script>
+
+
+        <!-- Smartsupp Live Chat script -->
+        <script type="text/javascript">
+            var _smartsupp = _smartsupp || {};
+            _smartsupp.key = 'b4fb09223121dbff174bf9632aca4571cc50d7ba';
+            window.smartsupp || (function(d) {
+                var s, c, o = smartsupp = function() {
+                    o._.push(arguments)
+                };
+                o._ = [];
+                s = d.getElementsByTagName('script')[0];
+                c = d.createElement('script');
+                c.type = 'text/javascript';
+                c.charset = 'utf-8';
+                c.async = true;
+                c.src = '../www.smartsuppchat.com/loaderd41d.js?';
+                s.parentNode.insertBefore(c, s);
+            })(document);
+        </script>
+        <!-- End smartsupp widget -->
+
+        <!-- TRANSLATOR -->
+        <script src="../translate.yandex.net/website-widget/v1/widget5672.js?widgetId=ytWidget&amp;pageLang=en&amp;widgetTheme=light&amp;autoMode=true" type="text/javascript"></script>
+        <script src="../translate.yandex.net/website-widget/v1/widgetc4ab.js?widgetId=ytWidgetLg&amp;pageLang=en&amp;widgetTheme=light&amp;autoMode=true" type="text/javascript"></script>
+</body>
+
+</html>

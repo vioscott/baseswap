@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseSwap crypto exchange| Authenticate account details</title>
+
+    <!-- imports -->
+    <link rel="stylesheet" href="../assets/bstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.png">
+
+
+
+    <!-- font awesome links -->
+    <link rel="stylesheet" href="../assets/fa/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../%20assets/fa/css/brands.min.html">
+    <link rel="stylesheet" href="../assets/fa/css/solid.min.css">
+    <link rel="stylesheet" href="../assets/fa/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="../assets/flaticon/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="../assets/plugin/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Abel|Lobster|Heebo|ABeeZee|Roboto%20Condensed|Roboto">
+    <!-- End ==========================================================================
+    
+    main css -->
+    <!-- <link rel="stylesheet" href="assets/bipdocs/light.css"> -->
+    <link rel="stylesheet" href="../qikcss/style.css">
+    <link rel="stylesheet" href="../qikcss/main.css">
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <div class="authenticate-container authenticate-container-bg-2">
+        <div class="dialog hide" id="loginBox">
+            <div class="dialogContent loginBoxContent">
+                <div class="my-4">
+                    <center>
+                        <div class="loader"></div>
+                        <div class="mt-4">
+                            <p>Validating Details</p>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile header -->
+        <div class="">
+            <div class="container" style="min-height:100%">
+                <div class="row">
+                    <div class="col-12 d-block d-sm-none align-center" style="margin-top: 50px">
+                        <div id="logo_auth">
+                            <a href="../index.html">
+                                <img src="../assets/images/favicon.png" alt="" style="width: 50px; height: 45px;">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ## -->
+                    <div class="col-md-12 d-none d-sm-block mt-4">
+                        <div class="align-center">
+                            <a href="../index.html">
+                                <img src="../assets/images/bipswap_logo_main.png" alt="" srcset="" class="logo-lg" style="height: 45px; width: 200px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12 d-block d-sm-none" id="authTitle">
+                        <h4 class="align-center mainWhite">
+                            Login
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="row authBtn-container" style="background: none;">
+                    <div class="d-none d-sm-block col-md-3"></div>
+                    <div class="col-6 col-md-3 activeAuthBtn py-2" id="authLogin">
+                        <button id="authBtn" style="background:none; color:#333fff; border:0;">
+                        Login 
+                    </button>
+                    </div>
+                    <div class="col-6 col-md-3 py-2" id="authRegister">
+                        <button id="authBtn" style="background:none; color:#333fff; border:0;">
+                        Register
+                    </button>
+                    </div>
+                    <div class="d-none d-sm-block col-md-3"></div>
+                </div>
+
+                <div class="row mt-4" id="loginForm">
+                    <!-- forms -->
+                    <div class="d-none d-sm-block col-md-3"></div>
+                    <div class="col-12 col-md-6">
+                        <form class="post-form mx-auto" method="POST" action="/login">
+                            <div class="align-center py-2 d-none d-sm-block">
+                                <h4 class="moreWhite">Login</h4>
+                            </div>
+                            <input type="hidden">
+                            <div class="form-group">
+                                <small class="moreWhite">Email address</small>
+                                <input type="email" class="form-control" id="singnInEmail" aria-describedby="emailHelp" name="user_email">
+                            </div>
+                            <div class="form-group">
+                                <small class="moreWhite">Password</small>
+                                <input type="password" class="form-control" id="singnInPassword" name="user_password">
+                                <div style="margin-top: 5px; text-align: right;">
+                                    <small onclick="showPassword()" id="pTrigger" style="cursor: pointer;"><i class="fa fa-square f-icon"> </i> Show password </small>
+                                </div>
+                                <div>
+                                    <a href="password-reset/index.html" style="text-decoration: none; font-size: 14px;" class="moreWhite">
+                                Forgot Pasword?</a>
+                                </div>
+                            </div>
+                            <div class="" style="margin-top:70px; text-align: center;">
+                                <button type="button" class="defaultBtn2" onclick="signIn()" style="width: 50%;">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-none d-sm-block col-md-3"></div>
+                </div>
+
+                <!-- ====================================================================== -->
+                <div class="row mt-4 hide" id="registerForm">
+                    <div class="d-none d-sm-block col-md-3"></div>
+                    <!-- forms -->
+                    <div class="col-12 col-md-6">
+                        <form class="post-form" method="POST" action=method="POST" action="/register">
+                            <div class="align-center py-2 d-none d-sm-block">
+                                <h4>Create account</h4>
+                            </div>
+                            <input type="hidden" name="csrfmiddlewaretoken" value="3iOOk6BezWPnVzOfnN4Qi13vIp5grzyPTO7Ps6br2gjY5PI7kRp77qbXpMuRUnfI">
+                            <div class="form-group">
+                                <small class="mainWhite">Email address</small>
+                                <input type="email" class="form-control" id="useremail" aria-describedby="emailHelp" name="user_email" required>
+                            </div>
+                            <div class="form-group">
+                                <small class="moreWhite">Username</small>
+                                <input type="text" class="form-control" id="useremail" aria-describedby="emailHelp" name="username" required>
+                                <small id="emailHelp" class="form-text text-muted" style="font-size: 10px;">choose a username</small>
+                            </div>
+                            <div class="form-group">
+                                <small class="moreWhite">Password</small>
+                                <input type="password" class="form-control" id="singnUpPassword" name="user_password" required placeholder="Atleast 8 characters">
+                                <div style="margin-top: 5px; text-align: right;">
+                                    <small onclick="showPassword2()" id="pTrigger2" style="cursor: pointer;"><i class="fa fa-square f-icon"> </i> Show password </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div style="margin-block-end: 10px; cursor: pointer;">
+                                    <small id="toggleReferral" onclick="showReferralInput()">
+                                    Invited? Referral ID (optional)&nbsp; <i class="fa fa-sort-down f-icon" style="font-size: 16px;">
+                                    </i></small>
+                                </div>
+                                <input type="text" class="form-control hide" id="referral" placeholder="Enter referral ID" name="ref_link">
+                            </div>
+                            <div class="form-group" style="margin-top: 40px;">
+                                <input type="checkbox" name="" id="" required>
+                                <a href="../terms-and-conditions.html" style="text-decoration: none">
+                                    <small>Agree to terms and privacy policy</small>
+                                </a>
+                            </div>
+                            <div class="form-group" style="text-align: center; margin-top: 40px;">
+                                <button type="submit" class="defaultBtn2" style="width: 50%;"><i class="fas fa-user-plus"></i> Register</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-none d-sm-block col-md-3"></div>
+                </div>
+
+                <footer class="align-center py-4">
+                    <div>
+                        <p>Copyright &copy; BaseSwap 2022</p>
+                        <small>All Rights reserved</small>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- END -->
+        <!-- <div class="" style="height: 100px;"></div> -->
+    </div>
+
+    <script src="../assets/jquery.js"></script>
+
+    <script>
+        function closeLoginBox() {
+            $('#loginBox').addClass('hide')
+            $('.loginBoxContent').html(
+                `
+            <div class="my-4">
+                <center><div class="loader"></div>
+                    <p>Validating Details</p>
+                </center>
+            </div>
+            `
+            )
+        }
+
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        var csrftoken = getCookie('csrftoken');
+
+        function signIn() {
+            var singnInPassword = document.querySelector('#singnInPassword')
+            var singnInEmail = document.querySelector('#singnInEmail')
+
+
+            fd = new FormData()
+            fd.append('user_email', singnInEmail.value)
+            fd.append('user_password', singnInPassword.value)
+
+            if (singnInEmail.value.length == 0) {
+                singnInEmail.placeholder = 'provide this field'
+            }
+            if (singnInPassword.value.length == 0) {
+                singnInPassword.placeholder = 'Enter your password'
+            } else if (singnInPassword.value.length > 0 && singnInEmail.value.length > 0) {
+                $('#loginBox').removeClass('hide')
+                $.ajax({
+                    type: "POST",
+                    headers: {
+                        'X-CSRFToken': csrftoken,
+                    },
+                    url: "/account/login",
+                    data: fd,
+                    // dataType: "json",
+                    success: function(response) {
+                        if (response === 'Error') {
+                            $('.loginBoxContent').html(
+                                `<div class="align-center">
+                                <i class="fi fi-rr-info dColour" style="font-size:18px"></i>
+                                <p class="mainWhite">Login denied</p>
+                                <p class="mainWhite">Account Details are incorrect</p>
+                                <p class="mainWhite">Invalid Email or Password</p>
+                                <button type="submit" class="defaultBtn2" onclick="closeLoginBox()">
+                                    Dismiss</button>
+                            </div>
+                            `
+                            )
+                        } else if (response === 'Success') {
+                            $('.loginBoxContent').html(
+                                `<div class="align-center">
+                                <p class="mt-2" style="text-align: center;">
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+                                </p>
+                                <p class="dColour">Login Success</p>
+                                <p class="mainWhite">Granting Access to account...</p>
+                            </div>
+                            `
+                            )
+                            setTimeout(function() {
+                                location.href = "index13ff.html"
+                            }, 1000)
+                        }
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                });
+            }
+
+        }
+    </script>
+
+
+
+    <!-- Js Imports -->
+    <script src="../assets/jquery.js"></script>
+    <script src="../assets/bstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/bstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/plugin/lc_switch.min.js"></script>
+    <script src="../qikjs/main.js"></script>
+    <script src="../assets/plugin/jquery/jquery-ui.min.js"></script>
+
+    <script>
+        lc_switch('input[type=checkbox], input[type=radio]', {
+
+            // (string) "checked" status label text
+            on_txt: '<i class="fa fa-moon"></i>',
+
+            // (string) "not checked" status label text
+            off_txt: '<i class="fa fa-sun"></i>',
+
+            // (string) custom "on" color. Supports also gradients
+            on_color: '#AC9021',
+
+            // (bool) whether to enable compact mode
+            compact_mode: true
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseSwap| Buy &amp; Sell crypto assets with our advanced escrow tools. platform for crypto exchange</title>
+
+    <!-- imports -->
+    <link rel="stylesheet" href="assets/bstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- font awesome links -->
+    <link rel="stylesheet" href="assets/fa/css/fontawesome.min.css">
+    <link rel="stylesheet" href="%20assets/fa/css/brands.min.html">
+    <link rel="stylesheet" href="assets/fa/css/solid.min.css">
+    <link rel="stylesheet" href="assets/fa/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="assets/flaticon/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/plugin/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Abel|Lobster|Heebo|ABeeZee|Roboto%20Condensed|Roboto">
+    <!-- End ==========================================================================
+
+    main css -->
+
+
+    <link rel="stylesheet" href="qikcss/main.css">
+    <link rel="stylesheet" href="qikcss/style.css">
+    <link href="unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- End Messages ======================================================= -->
+
+
+    <div style="height: 100%;">
+        <!-- navbar -->
+        <div class="d-none d-sm-block" style=" background: #fff; color: #000;">
+            <nav class="py-4 navbar navbar-expand-lg navbar-light bg-light fixed-top authenticate-container-bg-2" style=" box-shadow: none; font-family: 'abel';">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/bipswap_logo_main.png" alt="" srcset="" class="logo-lg" style="height:33px; width: 150px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ml-4">
+                            <a class="nav-link moreWhite" href="account/index13ff.html" style="font-size: 18px;">
+                                Trade Now</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link moreWhite" href="learn.html" id="navbarDropdown" style="font-size: 18px !important;">
+                                Learn
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link moreWhite" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 18px !important;">
+                                Company <i class=" fi fi-rr-angle-small-down fixIcon3 moreWhite"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #fff;">
+                                <p>
+                                    <a class="dropdown-item moreWhite" href="aboutUs.html" style="font-size: 18px;">About Us</a>
+                                </p>
+                                <p>
+                                    <a class="dropdown-item moreWhite" href="learn.html" style="font-size: 18px;">Escrow Methods</a>
+                                </p>
+                                <!-- <p>
+                                    <a class="dropdown-item moreWhite2" href="#" style="font-size: 18px;"> Security</a>
+                                </p> -->
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item active">
+                            <a class="nav-link moreWhite" href="mailto:baseswap.team@gmail.com" style="font-size: 18px !important;"> 
+                                Support
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item active mr-2">
+                            <a class="nav-link" href="account/index.html" style="font-size: 18px !important;"> 
+                                    Log in
+                                </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="account/register-view.html" style="font-size: 18px !important;">
+                                <button class="Btn btn-primary">Register</button>
+                            </a>
+                        </li>
+
+                    </ul>
+            </nav>
+            </div>
+
+            <!-- for mobile -->
+            <div class="d-block d-sm-none">
+                <div class="toggleOverlay" onclick="removeToggleOverlay()"></div>
+                <div class="container-fluid">
+                    <div class="row fixed-top" style=";">
+                        <div class="col-12 px-4 py-2" id="navSmallDb">
+                            <nav>
+                                <div class="row">
+                                    <div class="col-8" id="logoDark">
+                                        <a class="navbar-brand" href="index.html"><img src="assets/images/bipswap_logo_main.png" alt="" srcset="" class="logo-lg" style="height:27px; width: 130px;"></a>
+                                    </div>
+                                    <div class="col-8" id="logoLight" style="display: none;">
+                                        <a class="navbar-brand" href="index.html"><img src="assets/images/bipswap_logo_main.png" alt="" srcset="" class="logo-lg" style="height:27px; width: 130px;"></a>
+                                    </div>
+
+                                    <div class="col-4" style="text-align: right; padding-right: 15px;">
+                                        <div style="padding-top: 10px; font-size: 20px;">
+                                            <i class="fi fi-rr-menu-burger f-icon" id="toggleDropdownNavSmall" onclick="toggleNavSmall()"></i>
+                                        </div>
+
+                                        <div class="sm-nav-drop-down" style="height: 100% !important; width: 70%;">
+                                            <div class="sm-nav-content m-4" style="text-align: left;">
+                                                <small>Learn</small>
+                                                <a href="account/index13ff.html">
+                                                    <div class="row mt-2">
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Exchange
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5 align-right">
+                                                            <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="learn.html">
+                                                    <div class="row mt-2">
+                                                        <div class="col-7">
+                                                            <p>
+                                                                New to Crypto
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5 align-right">
+                                                            <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="learn.html">
+                                                    <div class="row mt-2">
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Wallet Linking
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5 align-right">
+                                                            <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                        </div>
+                                                    </div>
+                                                </a> <br>
+
+                                                <div class="row mt-2" style="border-top: 1px solid #69737E;" class="pt-4">
+                                                    <div class="col-12 mt-2">
+                                                        <small>Company</small>
+                                                    </div>
+                                                    <div class="col-7 mt-2">
+                                                        <p>
+                                                            <a href="aboutUs.html" style="font-size: 14px;"></i> Who we are</a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-5 mt-2 align-right">
+                                                        <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                    </div>
+                                                </div>
+
+                                                <a href="mailto:baseswap.team@gmail.com">
+                                                    <div class="row mt-2">
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Support
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5 align-right">
+                                                            <i class="mainWhite fi fi-rr-angle-right fixIcon3"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <div class="mt-4" style="border-top: 1px solid #69737E;" class="pt-2">
+
+                                                    <p class="mt-4">
+                                                        <a href="account/index.html" style="font-size: 14px;">
+                                                            <button class="Btn py-2" style="background: #0C121F; color: #fff; width: 100%;">Sign in</button>
+                                                        </a>
+                                                    </p>
+                                                    <a href="account/register-view.html">
+                                                        <button type="button" class="Btn px-4 py-2" style="background: #333fff; color: #fff; width: 100%;">
+                                                      Register
+                                                  </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END -->
+
+
+            <!-- desktop Body -->
+
+            <div class="authenticate-container authenticate-container-bg-2" style="padding: 0px;">
+                <div class="container-fluid d-none d-sm-block">
+                    <div class="row">
+
+                        <div class="container-fluid d-none d-sm-block mmt-50">
+                            <div class="row mt-2">
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-10">
+                                    <!-- TradingView Widget BEGIN -->
+                                    <!-- <div class="tradingview-widget-container">
+                                        <div class="tradingview-widget-container__widget"></div>
+                                        <script type="text/javascript" src="s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                                            {
+                                                "symbols": [{
+                                                    "proName": "FOREXCOM:SPXUSD",
+                                                    "title": "S&P 500"
+                                                }, {
+                                                    "proName": "FOREXCOM:NSXUSD",
+                                                    "title": "Nasdaq 100"
+                                                }, {
+                                                    "proName": "FX_IDC:EURUSD",
+                                                    "title": "EUR/USD"
+                                                }, {
+                                                    "proName": "BITSTAMP:BTCUSD",
+                                                    "title": "BTC/USD"
+                                                }, {
+                                                    "proName": "BITSTAMP:ETHUSD",
+                                                    "title": "ETH/USD"
+                                                }],
+                                                "showSymbolLogo": false,
+                                                "colorTheme": "dark",
+                                                "isTransparent": true,
+                                                "displayMode": "regular",
+                                                "locale": "ms_MY"
+                                            }
+                                        </script>
+                                    </div> -->
+                                    <!-- TradingView Widget END -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ## -->
+
+                        <div class="container d-none d-sm-block" id="firstSection">
+                            <div class="row mt-100">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12 align-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+                                            <a href="account/index13ff.html" style="text-decoration:none">
+                                                <small class="dColourGreen" style="font-size: 16px;">Start Trade Now <i class="fi fi-rr-arrow-right fixIcon2 dColourGreen"></i></small>
+                                            </a>
+                                            <h1 style="font-family: 'ubuntu'; font-size: 60px;">
+                                                Exchange Crypto Fast<span class="dColour">.</span>
+                                            </h1>
+                                            <small style="font-size: 28px; color: #3333ff;">Everything you need in one solution</small>
+                                        </div>
+
+                                        <div class="col-12 align-center pb-2" style="margin-top: 70px;" data-aos="fade-up" data-aos-duration="1000">
+                                            <a href="account/register-view.html" style="text-decoration: none;">
+                                                <button class="btn btn-primary" style="width: 15%; padding: 12px;">Register
+                          <!-- <i class="fi fi-rr-arrow-right fixIcon2" style="color: #000;"></i> -->
+                      </button>
+                                            </a>&nbsp; &nbsp; &nbsp;
+                                            <a href="learn.html" style="text-decoration: none;">
+                                                <button class="btn btn-outline-primary" style="width: 15%; padding: 12px;">
+                        Learn
+                      </button>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-3"></div>
+                                        <div class="col-6 align-center" style="margin-top: 70px; font-family: 'roboto';" data-aos="fade-up" data-aos-duration="1000">
+                                            <div class="" style="text-align: justify;">
+                                                <i class="fi fi-rr-circle-small dColour fixIcon2"></i> <span class="moreWhite">
+                      Exchange 100+ cryptocurrencies with our Escrow Crypto exchange system
+                    </span> <br>
+                                                <i class="fi fi-rr-circle-small dColour fixIcon2"></i> <span class="moreWhite">
+                      Buy & Sell cryptocurrencies in minutes with our super fast & easy
+                      tools</span> <br>
+                                                <i class="fi fi-rr-circle-small dColour fixIcon2"></i> <span class="moreWhite">Keyless wallet connection to manage your digital wallets and securely sign transactions while being in full control of your keys</span>
+                                                <!-- Keyless wallet connection to manage your digital wallets and sign
+                    transactions -->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3"></div>
+
+                                        <div class="col-md-4" style="margin-top: 50px;">
+                                            <div class="post-box-trans box_bg-1 align-center cards px-4">
+                                                <h5 class="mainWhite">Easy & Fast set-up</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4" style="margin-top: 50px;">
+                                            <div class="post-box-trans box_bg-1 align-center cards px-4">
+                                                <h5 class="mainWhite">Secure & automated exchange process</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4" style="margin-top: 50px;">
+                                            <div class="post-box-trans box_bg-1 align-center cards px-4">
+                                                <h5 class="mainWhite">Low fees</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="container-fluid d-none d-sm-block">
+                            <div class="row my-4 pb-2 border-t pb-2" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="col-12 mb-4 align-center" style="margin-top: 50px;">
+                                    <h4 class="dColour" style="font-family: roboto condensed;">
+                                        SECURELY BUY, SELL, SIGN AND MANAGE TRANSACTIONS
+                                    </h4>
+                                    <h1>Escrow exchange for 100+ cryptocurrencies</h1>
+                                    <p style="font-size: 16px; color: #000;">Easily and securely exchange tokens. Buy and sell tokens in minutes.</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 mt-4">
+                                                <iframe src="https://widget.coinlib.io/widget?type=full_v2&amp;theme=light&amp;cnt=6&amp;pref_coin_id=1505&amp;graph=yes" width="100%" height="420px" scrolling="none" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe>
+                                            </div>
+
+                                            <div class="col-4 mt-4 align-center">
+                                                <h5 class="mainWhite">Daily Exchange Volume</h5>
+                                                <h2 class="dColourGreen">$ 1,778,978</h2>
+                                            </div>
+                                            <div class="col-4 mt-4 align-center">
+                                                <h5 class="mainWhite">Supported countries</h5>
+                                                <h2 class="dColourGreen">100+</h2>
+                                            </div>
+                                            <div class="col-4 align-center mt-4">
+                                                <a href="learn.html" style="text-decoration:none">
+                                                    <button class="defaultBtnOpen" style="border: 1px solid #fff; color: #fff;">
+                    Learn more <i class="ml-2 fi fi-rr-arrow-right fixIcon2 moreWhite"></i>
+                  </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row dark_bg2 p-4">
+                                <div class="col-md-12">
+                                    <div class="container mt-100" style="margin-bottom: 50px;">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <div data-aos="fade-up" data-aos-duration="700">
+                                                    <img src="assets/images/phone_1.png" alt="" style="width: 300px; height: 580px;">
+                                                </div>
+                                                <div style="position: relative; z-index: 1; margin-top: -55%; margin-left: 30%;" data-aos="fade-left" data-aos-duration="1000">
+                                                    <img src="assets/images/paste_1Done.png" alt="" style="width: 280px; height: 370px;">
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <h4 class="dColour">START A TRADE</h4>
+                                                <h1 style="font-size: 50px;" data-aos-duration="600" data-aos="fade-up">
+                                                    Start & complete Escrow in 3 Easy steps
+                                                </h1>
+                                                <h5 data-aos-duration="700" data-aos="fade-up">
+                                                    Start an escrow, choose a payment method, complete trade terms, Fund released
+                                                </h5>
+                                                <h5 class="mt-4" data-aos-duration="800" data-aos="fade-up">
+                                                    <i class="fi fi-rr-circle-small fixIcon2 dColourGreen"></i>Exchange <span class="dColour">120+
+                  cryptocurrencies</span> securely, easy and fast.
+                                                </h5>
+                                                <h5 class="mt-4" data-aos-duration="1200" data-aos="fade-up">
+                                                    <i class="fi fi-rr-circle-small fixIcon2 dColour"></i>Set expiration time for your trade to enable transaction partners to easily cancel trades if terms are not met within specified intervals and reopen
+                                                    for new traders.
+                                                    <span class="badge badge-success">New</span>
+                                                </h5>
+                                                <div class="mt-4 pb-2" data-aos-duration="1500" data-aos="fade-up">
+                                                    <a href="account/index13ff.html" style="text-decoration:none">
+                                                        <button class="btn btn-outline-primary">
+                    Start Trade Now <i class="ml-2 fi fi-rr-arrow-right fixIcon2 moreWhite"></i>
+                  </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- mockups -->
+                            </div>
+
+                            <div class="row">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12" style="margin-top: 70px;">
+                                            <h4 class="dColour">FEATURES</h4>
+                                        </div>
+
+                                        <div class="col-4 mt-4">
+                                            <div class="">
+                                                <div class="mb-2 rounded-holder">
+                                                    <i class="fi fi-rr-vector-alt" style="font-size: 24px; color: #fff;"></i>
+                                                </div>
+                                                <h2 class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="700">Fast Escrow Process</h2>
+                                                <p style="font-size: 20px;" class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="1200">
+                                                    Unparalleled Crypto Exchange process. Easily create trades and swap Tokens.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mt-4">
+                                            <div class="">
+                                                <div class="mb-2 rounded-holder">
+                                                    <i class="fi fi-rr-ticket" style="font-size: 24px; color: #fff;"></i>
+                                                </div>
+                                                <h2 class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="700">Virtual wallet</h2>
+                                                <p style="font-size: 20px;" class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="1200">
+                                                    Baseswap Wallet cryptocurrencies are saved as stable coins. Use your account funds to enter trades and swap tokens.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mt-4">
+                                            <div class="">
+                                                <div class="mb-2 rounded-holder">
+                                                    <i class="fi fi-rr-vector" style="font-size: 24px; color: #fff;"></i>
+                                                </div>
+                                                <h2 class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="700">Secure Exchange</h2>
+                                                <p style="font-size: 20px;" class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="1200">
+                                                    We use multi-signature transaction process and Automated methods for trade handling to avoid desputes between traders</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 align-center mt-4">
+                                            <p style="font-size: 20px;" class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="1000">
+                                                High end escrow payment system, Unparalleled security, ease of use, dispute resolution and quick disbursement of funds all while being fully compliant. We provide trade timing feature for traders to easily cancel trade within specified period and reopen
+                                                for new traders if terms are not met.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="container trust" style="padding-bottom:50px">
+                                <div class="row">
+                                    <div class="row">
+                                        <div class="col-12 mb-4 align-center" style="margin-top: 50px;" data-aos="fade-right" data-aos-duration="700">
+                                            <h1>Trusted by over 50000+ Users</h1>
+                                            <h5 style="font-size: 16px;">one of the most trusted & fastest growing crypto exchange platform</h5>
+                                            <h5 style="font-size: 20px;" class="dColour">Why many users choose Us</h5>
+                                        </div>
+
+                                        <div class="col-6 align-center" style="margin-top: 40px;" data-aos="fade-up" data-aos-duration="700">
+                                            <center>
+                                                <div class="post-box-trans mb-2" style="width: fit-content;">
+                                                    <i class="fi fi-rr-shield-check dColour" style="font-size: 26px; color: #3333ff;"></i>
+                                                </div>
+                                            </center>
+                                            <h4>Secure assets storage</h4>
+                                            <p style="font-size: 16px;"> All digital assets are stored in secure offline storage. Thus there are no possibilities for loss of user assets.</p>
+                                            <a href="learn.html" style="text-decoration:none">
+                                                <i class="fi fi-rr-angle-right dColour fixIcon2"></i><span class="dColour"> Learn more about our methods</span>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-6 align-center" style="margin-top: 40px;" data-aos="fade-up" data-aos-duration="1000">
+                                            <center>
+                                                <div class="post-box-trans mb-2" style="width: fit-content;">
+                                                    <i class="fi fi-rr-check dColour" style="font-size: 26px;"></i>
+                                                </div>
+                                            </center>
+                                            <h4>We implement best practices</h4>
+                                            <p style="font-size: 16px;"> BaseSwap follows approved methods for secure and efficient transaction, to achieve maximum user satisfaction</p>
+                                            <a href="learn.html" style="text-decoration:none">
+                                                <i class="fi fi-rr-angle-right dColour fixIcon2"></i><span class="dColour"> Learn more about our methods</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 box-bg-white" style="padding-top: 70px;">
+                                <div class="container">
+                                    <div class="row mx-4">
+                                        <div class="col-md-6">
+                                            <h1 style="font-size: 50px; color: #000; font-family: 'heebo';" data-aos-duration="700" data-aos="fade-up">
+                                                Trade with Confidence
+                                            </h1>
+                                            <h3 style="color: rgb(58, 62, 65);" class="mt-4" data-aos-duration="900" data-aos="fade-up">
+                                                Trade Crypto person-to-person in an easy, fast, and secure way.
+                                            </h3>
+                                            <h4 style="color: rgb(21, 22, 22);" class="mt-4" data-aos-duration="1200" data-aos="fade-up">
+                                                <i class="fa fa-check-circle dColourGreen"></i> Trusted and secure, anytime & anywhere
+                                            </h4>
+                                            <h4 style="color: rgb(21, 22, 22);" class="mt-4" data-aos-duration="1500" data-aos="fade-up">
+                                                <i class="fa fa-check-circle dColourGreen"></i> Keyless wallet connection to securely connect digital wallets and sign transactions
+                                            </h4>
+                                            <div class="mt-100 pb-2" data-aos-duration="1500" data-aos="fade-up">
+                                                <a href="account/index13ff.html" style="text-decoration:none">
+                                                    <button class="btn btn-outline-primary" style="border: 1px solid #3333ff; color: #000;">
+                  Start Exchange Now <i class="ml-2 fi fi-rr-arrow-right fixIcon2" style="color: #000;"></i>
+                </button>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 align-right" data-aos="flip-down" data-aos-duration="1000">
+                                            <img src="assets/images/phone_2fix.png" alt="" style="width: 460px; height: 700px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-top: 70px; margin-bottom: 70px;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 align-center" data-aos-duration="700" data-aos="fade-up">
+                                            <h3 class="">How it works</h3>
+                                        </div>
+                                        <div class="col-3 align-center" data-aos-duration="900" data-aos="fade-up">
+                                            <div class="mt-4">
+                                                <i class="fi fi-rr-user-add dColour" style="font-size: 26px;"></i>
+                                                <h4 style="font-family: 'heebo';">Register</h4>
+                                                <h5>Simply open an account to start buying and selling crypto assets with our escrow service</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 align-center" data-aos-duration="1200" data-aos="fade-up">
+                                            <div class="mt-4">
+                                                <i class="fi fi-rr-add dColour" style="font-size: 26px;"></i>
+                                                <h4 style="font-family: 'heebo';">Create or Join a trade</h4>
+                                                <h5>Use our easy steps to start a trade or join an existing trade to exchange Bitcoin and over 100 cryptocurrencies
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 align-center" data-aos-duration="1500" data-aos="fade-up">
+                                            <div class="mt-4">
+                                                <i class="fi fi-rr-pencil dColour" style="font-size: 26px;"></i>
+                                                <h4 style="font-family: 'heebo';">Complete transaction</h4>
+                                                <h5>securely complete payments with our several payment methods as specified by the transaction terms. All methods fully automated</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-3" data-aos-duration="1700" data-aos="fade-up">
+                                            <div class="mt-4 align-center">
+                                                <i class="fi  fi-rr-box dColour" style="font-size: 26px;"></i>
+                                                <h4 style="font-family: 'heebo';">Withdraw fund</h4>
+                                                <h5>If all terms are met for a trade, all fund are released immediately to specified wallet addresses</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <div class="mt-4 align-center">
+                                                <a href="learn.html" style="text-decoration:none">
+                                                    <i class="fi fi-rr-angle-right dColour fixIcon2"></i><span class="dColour"> Learn more about Escrow methods</span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 p-4 align-center mt-4" data-aos-duration="500" data-aos="fade-up">
+                                            <div class="post-box-trans py-4">
+                                                <h1 class="mainWhiteDiv">
+                                                    Tell a friend & earn free cryptocurrencies with our referral program!
+                                                </h1>
+                                                <h5>Share your referral link to others to earn free crypto bonuses. </h5>
+                                                <h5>
+                                                    After your referral has created an account and traded atleast 1000 USD in buy and/sell transactions you recieve 70 USD equivalent in bitcoins
+                                                </h5>
+                                                <i class="fi fi-rr-users" style="font-size: 30px;"></i><br>
+                                                <a href="account/index13ff.html" style="text-decoration:none">
+                                                    <button class=" btn btn-lg btn-primary" style="color: #fff; width: 25%;">Start earning</button>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row py-4 dark_bg2">
+                                <div class="container">
+                                    <div class="row py-4" id="counterBox">
+                                        <div class="col-md-4 align-center">
+                                            <h4>
+                                                <span class="counter dColour" data-count="50000" style="font-size: 40px;"></span>
+                                                <span class="dColour" style="font-size: 40px;">+</span>
+                                            </h4>
+                                            <h3>Registered Users</h3>
+                                        </div>
+                                        <div class="col-md-4 align-center">
+                                            <h4>
+                                                <span class="counter dColour" data-count="5500" style="font-size: 40px;"></span>
+                                            </h4>
+                                            <h3>Active Traders</h3>
+                                        </div>
+                                        <div class="col-md-4 align-center">
+                                            <h4>
+                                                <span class="counter dColour" data-count="200" style="font-size: 40px;"></span>
+                                            </h4>
+                                            <h3>Our Team</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row dark_bg2" style="padding-bottom:50px">
+                                <div class="col-12  mt-100 align-center mb-4">
+                                    <h1 class="mainWhite">Our partners</h1>
+                                </div>
+                            </div>
+
+
+                            <div class="row" style="margin-top: 50px; background: #3333ff;">
+                                <div class="col-md-12 align-center">
+                                    <h5 style="color: #fff; font-size: 28px;">BaseSwap</h5>
+                                </div>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 col-6" style="font-size: 14px;">
+                                            <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">COMPANY</h5>
+                                            <p style="font-size: 14px;"><span class="fa fa-map-marker"></span> Registered office address: CHADWORD HOUSE, WILMSLOW ROAD, HANDFORTH, CHESHIRE, SK9 3HP</p>
+
+                                            <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">SUPPORT</h5>
+                                            <a href="mailto:baseswap.team@gmail.com" target="_blank" style="text-decoration: none; color: rgb(226, 219, 219);;">
+                                                <p> support.baseswap.io</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4 col-6" style="color:white; font-size: 14px;">
+                                            <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">LEGAL</h5>
+                                            <a href="terms-and-conditions.html" style="color: rgb(196, 186, 186); font-size: 16px">Terms and
+              Conditions</a><br>
+                                            <a href="privacy-policy.html" style="color: rgb(196, 186, 186); font-size: 16px">Policy</a><br>
+                                            <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">DISCLAIMER</h5>
+                                            <p style="font-size: 14px;">
+                                                You agree to be of legal age in your country to partake in this program, and in all the cases your minimal age must be 18 years.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 col-6" style="font-size: 14px;">
+                                            <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">QUICK LINKS</h5>
+                                            <a href="aboutUs.html" style="color: rgb(196, 186, 186);">About Us</a><br>
+                                            <a href="#" style="color: rgb(196, 186, 186);">Learn About Ethereum Tokens</a><br>
+                                            <a href="#" style="color: rgb(196, 186, 186);">Why Crypto Escrow service</a><br>
+                                            <div id="ytWidgetLg" class="mt-4"></div>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <div style="text-align: center; background: none; padding:12px">
+                                                <p>Copyright &copy; Baseswap 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script src="assets/jquery.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                $('.counter').each(function() {
+                                    var $this = $(this),
+                                        countTo = $this.attr('data-count');
+
+                                    $({
+                                        countNum: $this.text()
+                                    }).animate({
+                                        countNum: countTo
+                                    }, {
+                                        duration: 8000,
+                                        easing: 'linear',
+                                        step: function() {
+                                            $this.text(Math.floor(this.countNum));
+                                        },
+                                        complete: function() {
+                                            $this.text(this.countNum);
+                                            //alert('finished');
+                                        }
+
+                                    });
+                                });
+                            })
+                        </script>
+
+                    </div>
+                </div>
+                <div class="" style="margin-top: 80px;">
+
+
+                    <div class="container d-block d-sm-none" id="firstSection">
+                        <div class="row">
+                            <div class="col-4 mt-2">
+
+                            </div>
+                            <div class="col-8">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                    <div class="tradingview-widget-container__widget"></div>
+                                    <script type="text/javascript" src="../s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                                        {
+                                            "symbols": [{
+                                                "proName": "FOREXCOM:SPXUSD",
+                                                "title": "S&P 500"
+                                            }, {
+                                                "proName": "FOREXCOM:NSXUSD",
+                                                "title": "Nasdaq 100"
+                                            }, {
+                                                "proName": "FX_IDC:EURUSD",
+                                                "title": "EUR/USD"
+                                            }, {
+                                                "proName": "BITSTAMP:BTCUSD",
+                                                "title": "BTC/USD"
+                                            }, {
+                                                "proName": "BITSTAMP:ETHUSD",
+                                                "title": "ETH/USD"
+                                            }],
+                                            "showSymbolLogo": false,
+                                            "colorTheme": "dark",
+                                            "isTransparent": true,
+                                            "displayMode": "regular",
+                                            "locale": "ms_MY"
+                                        }
+                                    </script>
+                                </div>
+                                <!-- TradingView Widget END -->
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" style="margin-top: 50px;">
+                                <a href="account/index13ff.html" style="text-decoration:none">
+                                    <small class="dColourGreen" style="font-size: 16px;">Start Trade Now <i class="fi fi-rr-arrow-right fixIcon2 dColourGreen"></i></small>
+                                </a>
+                                <h1 style="font-family: 'ubuntu'; font-size: 33px;">
+                                    Exchange Crypto In Minutes<span class="dColour">.</span>
+                                </h1>
+                                <small style="font-size: 18px;" class="mainWhite">Everything you need in one solution</small>
+                            </div>
+                            <div class="col-12 pb-2" style="margin-top: 70px;" data-aos="fade-up" data-aos-duration="1000">
+                                <a href="account/register-view.html" style="text-decoration: none;">
+                                    <button class="defaultBtn2" style="width: 40%; padding: 12px;">Register
+                    <!-- <i class="fi fi-rr-arrow-right fixIcon2" style="color: #000;"></i> -->
+                </button>
+                                </a>&nbsp; &nbsp; &nbsp;
+                                <a href="learn.html" style="text-decoration: none;">
+                                    <button class="defaultBtnOpen" style="width: 40%; padding: 12px;">
+                  Learn
+                </button>
+                                </a>
+                            </div>
+                            <div class="col-12" style="margin-top: 70px; font-family: 'roboto';" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="row">
+                                    <div class="col-1"><i class="fi fi-rr-circle-small dColour fixIcon2"></i></div>
+                                    <div class="col-11">
+                                        <small class="moreWhite">
+                        Exchange 100+ cryptocurrencies with our Escrow exchange system
+                      </small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><i class="fi fi-rr-circle-small dColour fixIcon2"></i></div>
+                                    <div class="col-11">
+                                        <small class="moreWhite">
+                        Buy & Sell cryptocurrencies in munites with our super fast & easy
+                        tools
+                      </small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><i class="fi fi-rr-circle-small dColour fixIcon2"></i></div>
+                                    <div class="col-11">
+                                        <small class="moreWhite">
+                        Keyless wallet connection to manage your digital wallets and sign
+                        transactions
+                      </small>
+                                    </div>
+
+
+                                    <div class="row slider mt-100 px-4">
+                                        <div class="col-12 post-box-trans box_bg-1 align-center cards px-4">
+                                            <h5 class="moreWhite">Easy & Fast set-up</h5>
+                                        </div>
+                                        <div class="col-12 post-box-trans box_bg-1 align-center cards px-4">
+                                            <h5 class="moreWhite">Secure automated exchange process</h5>
+                                        </div>
+                                        <div class="col-12 post-box-trans box_bg-1 align-center cards px-4">
+                                            <h5 class="moreWhite">Low fees</h5>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- ### -->
+                    <div class="container-fluid d-block d-sm-none mt-100">
+                        <div class="row pb-2 border-t pb-2">
+                            <div class="col-12 mb-4 align-center" style="margin-top: 50px;">
+                                <div>
+                                    <h5 class="dColour" style="font-family: roboto condensed;" data-aos="fade-up" data-aos-duration="700">
+                                        SECURELY BUY, SELL, SIGN AND MANAGE TRANSACTIONS
+                                    </h5>
+                                    <h3 data-aos="fade-up" data-aos-duration="1200">
+                                        Escrow exchange for 120+ cryptocurrencies
+                                    </h3>
+                                    <p style="font-size: 16px;" data-aos="fade-up" data-aos-duration="1500">
+                                        Easily and securely exchange tokens. Buy and sell tokens in minutes.</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 mt-4">
+                                            <iframe src="https://widget.coinlib.io/widget?type=full_v2&amp;theme=dark&amp;cnt=6&amp;pref_coin_id=1505&amp;graph=yes" width="100%" height="420px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe>
+                                        </div>
+
+                                        <div class="col-12 mt-4 align-center">
+                                            <h5 class="mainWhite">Daily Exchange Volume</h5>
+                                            <h2 class="dColourGreen">$ 1,778,978</h2>
+                                        </div>
+                                        <div class="col-12 mt-4 align-center">
+                                            <h5 class="mainWhite">Supported countries</h5>
+                                            <h2 class="dColourGreen">100+</h2>
+                                        </div>
+                                        <div class="col-12 align-center mt-4">
+                                            <a href="learn.html" style="text-decoration:none">
+                                                <button class="btn btn-outline-primary">
+                                Learn more <i class="ml-2 fi fi-rr-arrow-right fixIcon2 moreWhite"></i>
+                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row dark_bg2 mt-100">
+                            <div class="col-12">
+                                <div class="container mt-100" style="margin-bottom: 50px;">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div data-aos="fade-up" data-aos-duration="700">
+                                                <img src="assets/images/phone_1.png" alt="" style="width: 90%; height: 520px;">
+                                            </div>
+                                            <div style="position: relative; z-index: 1; margin-top: -80%;" data-aos="fade-up" data-aos-duration="1000">
+                                                <img src="assets/images/paste_1Done.png" alt="" style="width: 100%; height: 320px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END mockups -->
+
+                            <div class="col-12">
+                                <h4 class="dColour">START A TRADE</h4>
+                                <h1 style="font-size: 40px;" data-aos-duration="600" data-aos="fade-up">
+                                    Start & complete Escrow in 3 Easy steps
+                                </h1>
+                                <h5 data-aos-duration="700" data-aos="fade-up">
+                                    Start an escrow, choose a payment method, complete trade terms, Fund released
+                                </h5>
+                                <h5 class="mt-4" data-aos-duration="800" data-aos="fade-up">
+                                    <i class="fi fi-rr-circle-small fixIcon2 dColourGreen"></i>Exchange <span class="dColour">120+
+                    cryptocurrencies</span> securely, easy and fast.
+                                </h5>
+                                <h5 class="mt-4" data-aos-duration="1200" data-aos="fade-up">
+                                    <i class="fi fi-rr-circle-small fixIcon2 dColour"></i>Set expiration time for your trade to enable transaction partners to easily cancel trades if terms are not met within specified intervals and reopen for new traders.
+                                    <span class="badge badge-success">New</span>
+                                </h5>
+                                <div class="mt-4 pb-2" data-aos-duration="1500" data-aos="fade-up" style="margin-bottom:50px">
+                                    <a href="account/index13ff.html">
+                                        <button class="btn btn-outline-primary" style="width: 80%;">
+                        Start Trade Now <i class="ml-2 fi fi-rr-arrow-right fixIcon2 moreWhite"></i>
+                    </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12" style="margin-top: 70px;">
+                                        <h4 class="dColour">FEATURES</h4>
+                                    </div>
+
+                                    <div class="col-12 mt-4">
+                                        <div class="">
+                                            <div class="mb-2 post-box-trans" style="width: fit-content; background: #3333ff;">
+                                                <i class="fi fi-rr-vector-alt" style="font-size: 24px; color: #fff;"></i>
+                                            </div>
+                                            <h4 class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="700">Fast Crypto Escrow Process</h4>
+                                            <p style="font-size: 16px;" class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="1200">
+                                                Unparalleled Crypto Exchange process. Easily create trades and swap Tokens.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <div class="">
+                                            <div class="mb-2 post-box-trans" style="width: fit-content; background: #3333ff;">
+                                                <i class="fi fi-rr-ticket" style="font-size: 24px; color: #fff;"></i>
+                                            </div>
+                                            <h4 class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="700">BaseSwap digital wallet</h4>
+                                            <p style="font-size: 16px;" class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="1200">
+                                                BaseSwap digital wallet saves your cryptocurrencies as stable coins. Use your account funds to enter trades and swap tokens.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <div class="">
+                                            <div class="mb-2 post-box-trans" style="width: fit-content; background: #3333ff;">
+                                                <i class="fi fi-rr-vector" style="font-size: 24px; color: #fff;"></i>
+                                            </div>
+                                            <h4 class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="700">Secure Exchange</h4>
+                                            <p style="font-size: 16px;" class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="1200">
+                                                We use multi-signature transaction process and Automated methods for trade handling to avoid desputes between traders</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <p style="font-size: 16px;" class="mainWhiteDiv" data-aos="fade-up" data-aos-duration="1000">
+                                            High end escrow payment system, Unparalleled security, ease of use, dispute resolution and quick disbursement of funds all while being fully compliant. We provide trade timing feature for traders to easily cancel trade within specified period and reopen
+                                            for new traders if terms are not met.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 mb-4 align-center" style="margin-top: 50px;" data-aos="fade-right" data-aos-duration="700">
+                                        <h3>Trusted by over 50000+ Users</h3>
+                                        <h5 style="font-size: 16px;">one of the most trusted & fastest growing crypto exchange platform</h5>
+                                        <h5 style="font-size: 20px;" class="dColour">Why many users choose Us</h5>
+                                    </div>
+
+                                    <div class="col-12 align-center" style="margin-top: 40px;" data-aos="fade-up" data-aos-duration="700">
+                                        <center>
+                                            <div class="post-box-trans mb-2" style="width: fit-content;">
+                                                <i class="fi fi-rr-shield-check dColour" style="font-size: 26px;"></i>
+                                            </div>
+                                        </center>
+                                        <h4>Secure assets storage</h4>
+                                        <p style="font-size: 16px;"> All digital assets are stored in secure offline storage. Thus there are no possibilities for loss of user assets.</p>
+                                        <i class="fi fi-rr-angle-right dColour fixIcon2"></i><span class="dColour"> Learn more about our
+                        methods</span>
+                                    </div>
+
+                                    <div class="col-12 align-center mb-4" style="margin-top: 40px;" data-aos="fade-up" data-aos-duration="1000">
+                                        <center>
+                                            <div class="post-box-trans mb-2" style="width: fit-content;">
+                                                <i class="fi fi-rr-check dColour" style="font-size: 26px;"></i>
+                                            </div>
+                                        </center>
+                                        <h4>We implement best practices</h4>
+                                        <p style="font-size: 16px;"> BaseSwap follows approved methods for secure and efficient transaction, to achieve maximum user satisfaction</p>
+                                        <i class="fi fi-rr-angle-right dColour fixIcon2"></i><span class="dColour"> Learn more about our
+                        methods</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4 box-bg-white" style="padding-top: 70px;">
+                            <div class="col-12 my-2">
+                                <h3 style="font-size: 35px; color: #000; font-family: 'heebo';" data-aos-duration="700" data-aos="fade-up" class="align-center">
+                                    Trade with Confidence
+                                </h3>
+                            </div>
+                            <div class="col-12 align-right" data-aos="fade-up" data-aos-duration="1000">
+                                <img src="assets/images/phone_2fix.png" alt="" style="width: 100%; height: 490px;">
+                            </div>
+                            <div class="col-12">
+                                <h3 style="color: rgb(58, 62, 65);" class="mt-4" data-aos-duration="900" data-aos="fade-up">
+                                    Trade Crypto person-to-person in an easy, fast, and secure way.
+                                </h3>
+                                <h5 style="color: rgb(21, 22, 22);" class="mt-4" data-aos-duration="1200" data-aos="fade-up">
+                                    <i class="fa fa-check-circle dColourGreen"></i> Trusted and secure, anytime & anywhere
+                                </h5>
+                                <h5 style="color: rgb(21, 22, 22);" class="mt-4" data-aos-duration="1500" data-aos="fade-up">
+                                    <i class="fa fa-check-circle dColourGreen"></i> Keyless wallet connection. Securely connect digital wallets and sign transactions
+                                </h5>
+                                <div class="mt-100 pb-2 align-center" data-aos-duration="1500" data-aos="fade-up" style="margin-bottom: 70px;">
+                                    <button class="defaultBtnOpen p-2" style="border: 1px solid #3333ff; color: #3333ff; width: 70%;">
+                    Start Exchange Now <i class="ml-2 fi fi-rr-arrow-right fixIcon2" style="color: #000;"></i>
+                </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 70px; margin-bottom: 70px;">
+                            <div class="col-12 align-center" data-aos-duration="700" data-aos="fade-up">
+                                <h3 class="">How it works</h3>
+                            </div>
+                            <div class="col-12 align-center mt-4" data-aos-duration="900" data-aos="fade-up">
+                                <i class="fi fi-rr-user-add dColour" style="font-size: 26px;"></i>
+                                <h4 style="font-family: 'heebo';">Register</h4>
+                                <h5>Simply open an account to start buying and selling crypto assets with our escrow service</h5>
+                            </div>
+                            <div class="col-12 align-center mt-4" data-aos-duration="1200" data-aos="fade-up">
+                                <i class="fi fi-rr-add dColour" style="font-size: 26px;"></i>
+                                <h4 style="font-family: 'heebo';">Create or Join a trade</h4>
+                                <h5>Use our easy steps to start a trade or join an existing trade to exchange Bitcoin and over 100 cryptocurrencies
+                                </h5>
+                            </div>
+                            <div class="col-12 align-center mt-4" data-aos-duration="1500" data-aos="fade-up">
+                                <i class="fi fi-rr-pencil dColour" style="font-size: 26px;"></i>
+                                <h4 style="font-family: 'heebo';">Complete transaction</h4>
+                                <h5>securely complete payments with our several payment methods as specified by the transaction terms. All methods fully automated
+                                </h5>
+                            </div>
+                            <div class="col-12 mt-4 align-center" data-aos-duration="1700" data-aos="fade-up">
+                                <i class="fi  fi-rr-box dColour" style="font-size: 26px;"></i>
+                                <h4 style="font-family: 'heebo';">Withdraw fund</h4>
+                                <h5>If all terms are met for a trade, all fund are released immediately to specified wallet addresses
+                                </h5>
+                            </div>
+                            <div class="col-12 mt-4" data-aos-duration="1700" data-aos="fade-up">
+                                <div class="align-center">
+                                    <i class="fi fi-rr-angle-right dColour fixIcon2"></i><span class="dColour"> Learn more about Escrow
+                    methods</span>
+                                </div>
+                            </div>
+                            <div class="col-12 align-center mt-100" data-aos-duration="500" data-aos="fade-up">
+                                <div class="post-box py-4 moreWhite">
+                                    <h4 class="moreWhite">
+                                        Tell a friend & earn free cryptocurrencies with our referral program!
+                                    </h4>
+                                    <small class="moreWhite">Share your referral link to others to earn free crypto bonuses. </small><br>
+                                    <small class="moreWhite">
+                    After your referral has created an account and traded atleast 1000 USD in buy and/sell
+                    transactions you
+                    recieve 70 USD equivalent in bitcoins
+                </small>
+                                    <br>
+                                    <button class="defaultBtn2" style="background: #3333ff; color: #fff; width: 60%;">
+                  <i class="fi fi-rr-users" style="font-size: 20px;"></i>
+                   .Start earning</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row py-4" id="counterBox">
+                            <div class="col-md-4 align-center">
+                                <h4>
+                                    <span class="counter dColour" data-count="50000" style="font-size: 30px;"></span>
+                                    <span class="dColour" style="font-size: 30px;">+</span>
+                                </h4>
+                                <h5>Registered Users</h5>
+                            </div>
+                            <div class="col-md-4 align-center">
+                                <h4>
+                                    <span class="counter dColour" data-count="5500" style="font-size: 30px;"></span>
+                                </h4>
+                                <h5>Active Traders</h5>
+                            </div>
+                            <div class="col-md-4 align-center">
+                                <h4>
+                                    <span class="counter dColour" data-count="200" style="font-size: 30px;"></span>
+                                </h4>
+                                <h5>Our Team</h5>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4 py-4 box-bg-white">
+                            <div class="col-12 align-center">
+                                <h4 style="color:#000">Our partners</h4>
+                            </div>
+                        </div>
+
+
+
+                        <footer class="px-2 pl-2 pr-2" style="background-color: #3333ff;">
+                            <div class="container"><br>
+                                <h5 style="font-size: 28px; text-align: center;" style=" color: #fff;" class="moreWhite">BaseSwap</h5>
+                                <div class="row">
+                                    <div class="col-md-6 col-6" style="font-size: 14px;">
+                                        <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">COMPANY</h5>
+                                        <p style="font-size: 14px;"><span class="fa fa-map-marker"></span> Registered office address: CHADWORD HOUSE, WILMSLOW ROAD, HANDFORTH, CHESHIRE, SK9 3HP</p>
+
+                                        <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">SUPPORT</h5>
+                                        <a href="mailto:baseswap.team@gmail.com" target="_blank" style="text-decoration: none; color: rgb(226, 219, 219);;">
+                                            <p> support@baseswap.io</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 col-6" style="color:white; font-size: 14px;">
+                                        <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">LEGAL</h5>
+                                        <a href="terms-and-conditions.html" style="color: rgb(196, 186, 186); font-size: 16px">Terms and Conditions</a><br>
+                                        <a href="privacy-policy.html" style="color: rgb(196, 186, 186); font-size: 16px">Policy</a><br>
+
+                                    </div>
+                                    <div class="col-md-6 col-6" style="font-size: 14px;">
+                                        <h5 class="mb-2 mt-4 border-bottom pb-2" style="font-size: 16px;">QUICK LINKS</h5>
+                                        <a href="aboutUs.html" style="color: rgb(196, 186, 186);">
+                                            <p>About Us</p>
+                                        </a>
+                                        <a href="#" style="color: rgb(196, 186, 186);">
+                                            <p>Learn About Ethereum Tokens</p>
+                                        </a>
+                                        <p>
+                                            <a href="learn.html" style="color: rgb(196, 186, 186);">
+                            Why Crypto Escrow service
+                        </a>
+                                        </p>
+                                        <div id="ytWidget" class="mt-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="text-align: center; background: none; padding:12px">
+                                <p>Copyright &copy; BaseSwap 2022</p>
+                            </div>
+                        </footer>
+
+                    </div>
+
+                    <script>
+                        window.onload = () => {
+                            $('.downlaod-app-container').show('slide', {
+                                direction: 'down'
+                            }, 800)
+                        }
+
+                        const closeDownloadApp = () => {
+                            $('.downlaod-app-container').hide('slide', {
+                                direction: 'down'
+                            }, 800)
+                        }
+                    </script>
+
+                </div>
+            </div>
+            <!-- END -->
+        </div>
+
+        <script src="assets/jquery.js"></script>
+        <script src="assets/bstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/plugin/lc_switch.min.js"></script>
+        <script src="qikjs/main.js"></script>
+        <script src="qikjs/mainsm.js"></script>
+        <script src="qikjs/utils.js"></script>
+        <script src="assets/plugin/jquery/jquery-ui.min.js"></script>
+        <script src="unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            lc_switch('input[type=checkbox], input[type=radio]', {
+
+                // (string) "checked" status label text
+                on_txt: '<i class="fa fa-moon"></i>',
+
+                // (string) "not checked" status label text
+                off_txt: '<i class="fa fa-sun"></i>',
+
+                // (string) custom "on" color. Supports also gradients
+                on_color: '#AC9021',
+
+                // (bool) whether to enable compact mode
+                compact_mode: true
+            });
+        </script>
+
+        <script>
+            $("Input").on("focus", function() {
+                $("#mobile-bottom-nav").hide();
+            });
+
+            $("Input").on("blur", function() {
+                $("#mobile-bottom-nav").show();
+            });
+        </script>
+
+        <!-- data aos -->
+        <script>
+            AOS.init();
+        </script>
+
+
+        <!-- TRANSLATOR -->
+        <script src="../translate.yandex.net/website-widget/v1/widget5672.js?widgetId=ytWidget&amp;pageLang=en&amp;widgetTheme=light&amp;autoMode=true" type="text/javascript"></script>
+        <script src="../translate.yandex.net/website-widget/v1/widgetc4ab.js?widgetId=ytWidgetLg&amp;pageLang=en&amp;widgetTheme=light&amp;autoMode=true" type="text/javascript"></script>
+
+
+
+
+</body>
+
+</html>

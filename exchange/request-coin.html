@@ -1,0 +1,506 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QikPay crypto exchange| Coin Request</title>
+
+    <!-- imports -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/bstrap/css/bootstrap.min.css">
+
+    <!-- font awesome links -->
+    <link rel="stylesheet" href="../assets/fa/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../%20assets/fa/css/brands.min.css">
+    <link rel="stylesheet" href="../assets/fa/css/solid.min.css">
+    <link rel="stylesheet" href="../assets/fa/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="../assets/flaticon/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="../assets/plugin/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Antonio|Lobster|Heebo|ABeeZee|Roboto Condensed">
+
+    <!-- End ==========================================================================
+
+    main css -->
+    <link rel="stylesheet" href="../qikcss/style.css" id="theme">
+    <link rel="stylesheet" href="../qikcss/main.css">
+    <style>
+        .lcs_wrap,
+        .lcs_wrap * {
+            user-select: none;
+        }
+        
+        .lcs_wrap {
+            display: inline-block;
+            direction: ltr;
+            height: 28px;
+            width: 73px;
+            vertical-align: middle;
+        }
+        
+        .lcs_wrap input {
+            display: none;
+        }
+        
+        .lcs_switch {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            background: #ddd;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+        
+        .lcs_cursor {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            margin-top: -11px;
+            width: 22px;
+            height: 22px;
+            border-radius: 100%;
+            background: #fff;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .1);
+            z-index: 10;
+            transition: all .2s linear;
+        }
+        
+        .lcs_label {
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            line-height: 18px;
+            color: #fff;
+            font-weight: bold;
+            position: absolute;
+            width: 33px;
+            top: 5px;
+            overflow: hidden;
+            text-align: center;
+            opacity: 0;
+            text-shadow: 0 0 2px rgba(0, 0, 0, .1);
+            transition: all .2s ease-in-out .1s;
+        }
+        
+        .lcs_label.lcs_label_on {
+            left: -70px;
+            z-index: 6;
+        }
+        
+        .lcs_label.lcs_label_off {
+            right: -70px;
+            z-index: 5;
+        }
+        
+        .lcs_switch.lcs_on {
+            background: #75b936;
+        }
+        
+        .lcs_switch.lcs_on .lcs_cursor {
+            left: 48px;
+        }
+        
+        .lcs_switch.lcs_on .lcs_label_on {
+            left: 10px;
+            opacity: 1;
+        }
+        
+        .lcs_switch.lcs_off {
+            background: #b2b2b2;
+            box-shadow: 0px 0px 2px #a4a4a4 inset;
+        }
+        
+        .lcs_switch.lcs_off .lcs_cursor {
+            left: 3px;
+        }
+        
+        .lcs_switch.lcs_off .lcs_label_off {
+            right: 10px;
+            opacity: 1;
+        }
+        
+        .lcs_switch.lcs_disabled {
+            opacity: 0.65;
+            cursor: default;
+        }
+        
+        .lcs_compact {
+            height: 22px;
+            width: 47px;
+        }
+        
+        .lcs_compact .lcs_label {
+            display: none;
+        }
+        
+        .lcs_compact .lcs_cursor {
+            margin-top: -8px;
+            width: 16px;
+            height: 16px;
+        }
+        
+        .lcs_compact .lcs_switch.lcs_on .lcs_cursor {
+            left: 28px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="preloader" style="display: none;">
+        <center>
+            <div class="loader"></div>
+        </center>
+    </div>
+
+
+
+    <!-- End Messages =======================================================
+
+
+    <div class="dialog align-center" id="createTxn" style="display: none;">
+        <div class="dialogContent mainWhite" id="createTxnInner">
+            <div class="" style="font-size: 13px;">
+                <center>
+                    <div class="loader"></div>
+                    <h5 class="mt-2" style="color: #fff; font-size: 18px;">
+                        Creating Trade
+                    </h5>
+                    <h5>Please Wait..</h5>
+                </center>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div style="height: 100%;">
+        <!-- navbar -->
+        <div class="d-none d-sm-block">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-4">
+                <a class="navbar-brand" href="/"><img src="../assets/images/bipswap_logo_main.png" alt="" srcset="" class="logo-lg" style="height:28px; width: 130px;"></a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link moreWhite" href="dashboard.html"> Dashboard</a>
+                        </li>
+                        <li class="nav-item ml-4">
+                            <a class="nav-link" href="https://coinbase.com/learn/market-updates" style="color: #333fff !important;">Markets</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link moreWhite" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Transactions <i class="fi fi-rr-angle-down fixIcon3 moreWhite"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #333fff;">
+                                <p onclick="viewJointrade()">
+                                    <a class="dropdown-item py-2 moreWhite" href="/exchange/join-trade">Join Trade Room</a>
+                                </p>
+                                <p>
+                                    <a class="dropdown-item py-2 moreWhite2" href="/exchange/buyorder" style="color: #70da8a !important;">Buy Crypto</a>
+                                </p>
+                                <p>
+                                    <a class="dropdown-item py-2 moreWhite2" href="/exchange/sellToken" style="color: #bd3066 !important;">Sell crypto</a>
+                                </p>
+                                <!-- <div class="dropdown-divider"></div> -->
+                            </div>
+                        </li>
+                        <li class="nav-item ml-4">
+                            <a class="nav-link moreWhite" href="exchange/my-exn-rooms">Exchange rooms</a>
+                        </li>
+                        <li>
+                            <a class="nav-link moreWhite" href="request-coin.html">Request Coin</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fi fi-rr-user moreWhite2" style="font-size: 20px;"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background: #20242a;">
+                                <p class="mt-2">
+                                    <a class="dropdown-item" href="#"><i class="fi fi-rr-user"></i>
+                                        Hello $username
+                                    </a>
+                                </p>
+                                <a class="dropdown-item mainWhite" href="/account/settings">
+                                    <i class="fi fi-rr-settings"></i>&nbsp; Settings
+                                </a><br>
+                                <a class="dropdown-item mainWhite" href="/account/settings"><i class="fi  fi-rr-users"></i>&nbsp; Refer a
+                                    Friend
+                                </a><br>
+
+
+                                <div class="dropdown-divider"></div>
+                                <form action="/account/logout" class="dropdown-item" method="POST">
+                                    <input type="hidden" name="csrfmiddlewaretoken" value="S7oLES2Q9mjku7jnRu5TFygUGKR1th5aYe0VrV3u01Mb042FseUeRnK1AUqP83O8">
+                                    <button class="Btn mainWhite2" style="background: none;">
+                                        <i class="fi fi-rr-sign-out fixIcon2 mainWhite2"></i> Sign out
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- for mobile -->
+        <div class="d-block d-sm-none">
+            <div class="toggleOverlay" onclick="removeToggleOverlay()"></div>
+            <div class="container-fluid">
+                <div class="row fixed-top">
+                    <div class="col-12 px-4 authenticate-container-bg-2" id="navSmallDb">
+                        <nav>
+                            <div class="row">
+                                <div class="col-8" id="dbTitleHeader">
+                                    <a class="navbar-brand" href="/exchange/dashboard"><img src="../assets/images/favicon.png " alt="" srcset="" class="logo-lg" style="height:24px; width: 24px;">
+                                        <small class="mainWhite2"><b>QikPay</b></small>
+                                    </a>
+                                </div>
+                                <div class="col-8 hide" id="dbTitleHeaderApp">
+                                    <h4>Title</h4>
+                                </div>
+                                <div class="col-4" style="text-align: right; padding-right: 15px;">
+                                    <div style="padding-top: 10px; font-size: 22px;">
+                                        <i class="fi fi-rr-menu-burger f-icon" id="toggleDropdownNavSmall" onclick="toggleNavSmall()"></i>
+                                    </div>
+                                    <div class="sm-nav-drop-down">
+                                        <div class="sm-nav-content m-4" style="text-align: left;">
+                                            <p style="border-bottom: 1px solid #69737E;" class="pb-2">
+                                                <i class="fi fi-rr-user"></i> <small>Hi $username</small>
+                                            </p>
+                                            <p>
+                                                <a href="/wallet/"><i class="fi fi-rr-shield"></i> Wallet</a>
+                                            </p>
+                                            <p>
+                                                <a href="/exchange/buyorder"><i class="fi fi-rr-shopping-cart"></i> Buy crypto</a>
+                                            </p>
+                                            <p>
+                                                <a href="/exchange/sellToken"><i class="fi fi-rr-cream"></i> Sell crypto</a>
+                                            </p>
+                                            <p>
+                                                <a href="/exchange/my-exn-rooms"><i class="fi fi-rr-dollar"></i> Exchange rooms</a>
+                                            </p>
+
+                                            <p>
+                                                <a href="/account/settings"><i class="fi fi-rr-users"></i> Refer a friend</a>
+                                            </p>
+                                            <p>
+                                                <a href="/account/settings"><i class="fi fi-rr-settings"></i>Account Settings</a>
+                                            </p>
+
+                                            <p style="border-top: 1px solid #69737E;" class="pt-2">
+                                            </p>
+                                            <form action="/account/logout" method="POST">
+                                                <input type="hidden" name="csrfmiddlewaretoken" value="S7oLES2Q9mjku7jnRu5TFygUGKR1th5aYe0VrV3u01Mb042FseUeRnK1AUqP83O8">
+                                                <button type="submit" class="Btn moreWhite" style="background: none;">
+                                                    <i class="fi fi-rr-sign-out"></i> Log out
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-4" id="">
+            <div class="d-none d-sm-block col-md-3"></div>
+
+            <div class="col-12 col-md-6" style="margin-top: 50px">
+                <form class="post-form" method="POST" action="">
+                    <div class="align-center py-2 d-none d-sm-block">
+                        <h4>Request Currency</h4>
+                    </div>
+                    <input type="hidden" name="csrfmiddlewaretoken" value="SwsHNvo35RQUeNMD9jj9nBIZyg5IALIwI2LIVvYgybkvo3Gv6nEqc0QrfDuj3zpp">
+                    <div class="form-group">
+                        <small class="moreWhite">Coin Name</small>
+                        <input type="text" class="form-control" id="reqcoinName" aria-describedby="RequestCoin" name="reqcoinName" required>
+                    </div>
+                    <div class="form-group">
+                        <small class="moreWhite">Contract Address</small>
+                        <input type="text" class="form-control" id="useremail" aria-describedby="contractAddress" name="contractAddress" required>
+                        <small id="contractAddress" class="form-text text-muted" style="font-size: 10px;">input contract address of the coin you want to add</small>
+                    </div>
+                    <div class="form-group" style="text-align: center; margin-top: 40px;">
+                        <button type="submit" class="defaultBtn2" style="width: 50%;"></i> Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Js Imports -->
+        <script src="../assets/jquery.js"></script>
+        <script src="../assets/bstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/plugin/lc_switch.min.js"></script>
+        <script src="../qikjs/main.js"></script>
+        <script src="../qikjs/mainsm.js"></script>
+        <script src="../qikjs/utils.js"></script>
+
+
+        <script src="../assets/plugin/jquery/jquery-ui.min.js"></script>
+
+
+
+        <script src="../qikjs/connectW.js"></script>
+
+        <script>
+            lc_switch('input[type=checkbox], input[type=radio]', {
+
+                // (string) "checked" status label text
+                on_txt: '<i class="fa fa-moon"></i>',
+
+                // (string) "not checked" status label text
+                off_txt: '<i class="fa fa-sun"></i>',
+
+                // (string) custom "on" color. Supports also gradients
+                on_color: '#AC9021',
+
+                // (bool) whether to enable compact mode
+                compact_mode: true
+            });
+        </script>
+
+        <!-- fundToken Search -->
+        <script>
+            $(document).ready(function() {
+                $("#fundTokenSearch").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $(".fundTokenInner").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+
+        <!--  Search -->
+        <script>
+            $(document).ready(function() {
+                $("#searchCoinListSm").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $(".tokensToSet").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+
+            $(document).ready(function() {
+                $("#searchCoinListSm2").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $(".tokensToSet2").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+
+
+        <!--  Search -->
+        <script>
+            $(document).ready(function() {
+                $("#searchCoinListLg").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $(".tokensToSetLg").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+
+            $(document).ready(function() {
+                $("#searchCoinListLg2").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $(".tokensToSetLg2").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            $("Input").on("focus", function() {
+                $("#mobile-bottom-nav").hide();
+            });
+
+            $("Input").on("blur", function() {
+                $("#mobile-bottom-nav").show();
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('.modal').on('show.bs.modal', function() {
+                    if ($(document).height() > $(window).height()) {
+                        // no-scroll
+                        $('body').addClass("modal-open-noscroll");
+                    } else {
+                        $('body').removeClass("modal-open-noscroll");
+                    }
+                });
+                $('.modal').on('hide.bs.modal', function() {
+                    $('body').removeClass("modal-open-noscroll");
+                });
+            })
+        </script>
+
+
+        <script>
+            $(window).on('load', function() {
+                $('.preloader').hide('slide', {
+                    direction: 'left'
+                }, 500)
+            })
+        </script>
+
+        <script>
+            function toFront(e) {
+                e.style.zIndex = 1
+            }
+            $(function() {
+                $('#tradeBox').draggable()
+                $('#tradeBox').resizable({
+                    minHeight: 540,
+                    minWidth: 350,
+                })
+            })
+        </script>
+
+        <!-- Smartsupp Live Chat script -->
+        <script type="text/javascript">
+            var _smartsupp = _smartsupp || {};
+            _smartsupp.key = 'b4fb09223121dbff174bf9632aca4571cc50d7ba';
+            window.smartsupp || (function(d) {
+                var s, c, o = smartsupp = function() {
+                    o._.push(arguments)
+                };
+                o._ = [];
+                s = d.getElementsByTagName('script')[0];
+                c = d.createElement('script');
+                c.type = 'text/javascript';
+                c.charset = 'utf-8';
+                c.async = true;
+                c.src = 'https://www.smartsuppchat.com/loader.js?';
+                s.parentNode.insertBefore(c, s);
+            })(document);
+        </script>
+        <!-- End smartsupp widget -->
+
+        <!-- TRANSLATOR -->
+        <script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&amp;pageLang=en&amp;widgetTheme=light&amp;autoMode=true" type="text/javascript"></script>
+        <script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidgetLg&amp;pageLang=en&amp;widgetTheme=light&amp;autoMode=true" type="text/javascript"></script>
+
+        <div id="chat-application" style="display: block; z-index: 2147483647; position: fixed; overflow: hidden; bottom: 24px; left: initial; right: 11px; max-height: 65px; max-width: 113px; height: 65px; width: 113px; background: transparent;"><iframe id="chat-application-iframe" title="Smartsupp" aria-hidden="true" style="width: 100%; height: 100%; border: none; position: absolute; left: 0px; z-index: 10000001;"></iframe></div>
+</body>
+
+</html>
